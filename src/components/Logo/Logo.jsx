@@ -3,11 +3,11 @@ import { Link } from "react-router-dom";
 export default function Logo() {
     return (
         <div className="logo">
-            <h5>
+            <h4>
                 <Link to={""}>
-                    <span className="logo-name">Mark</span>eto<span className="logo-name">.</span>
+                    <div className="anime-logo"><span className="logo-name">Mark</span></div>eto<span className="logo-name">.</span>
                 </Link>
-            </h5>
+            </h4>
         </div>
     );
 }

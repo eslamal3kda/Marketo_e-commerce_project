@@ -17,6 +17,7 @@ export default function App() {
                 { path: "/shop", element: <h2>shop Page</h2> },
                 { path: "/blogs", element: <h2>blogs Page</h2> },
                 { path: "/gallery", element: <h2>gallery Page</h2> },
+                { path: "/wishlist", element: <h2>Wishlist Page</h2> },
                 { path: '*', element: <h2>Page Not Founded</h2> },
             ],
         },
