@@ -63,20 +63,6 @@ export default function Navbar() {
                                 <li><Link to={"single-blog"}>Single Blog</Link></li>
                             </ul>
                         </li>
-                        <li>
-                            <NavLink to={"/gallery"}>gallery <IoIosArrowDown /></NavLink>
-                            <ul className="gallery_list">
-                                <li>
-                                    <GallerySubList label={"Theme Elements"} title={"Pages that every website needs."} page1={"Accessories"} page2={"Camera"} page3={"Headphone"} page4={"Gamepad"} page5={"Laptop"} page6={"Mobile"} />
-                                </li>
-                                <li>
-                                    <GallerySubList label={"Theme Elements"} title={"Pages that every website needs."} page1={"Shop"} page2={"Product Details"} page3={"Wishlist"} page4={"Product Category"} page5={"Blog"} page6={"Blog Single"} />
-                                </li>
-                                <li>
-                                    <GallerySubList label={"Theme Elements"} title={"Pages that every website needs."} page1={"Product Category V2"} page2={"Contact"} page3={"Terms and Conditions"} page4={"FAQ"} page5={"About Us"} page6={"My Account"} />
-                                </li>
-                            </ul>
-                        </li>
                     </ul>
                     <div className="nav-icons">
                         <NavLink to={"wishlist"}>

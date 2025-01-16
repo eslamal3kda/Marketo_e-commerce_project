@@ -1,19 +1,38 @@
+
+import { FaArrowRightLong } from "react-icons/fa6";
 import GallerySubList from "../../components/GallerySubList/GallerySubList";
+import { IoLocationOutline } from "react-icons/io5";
 
 export default function Footer() {
     return (
-        <footer>
-            <h1>footer</h1>
-            <GallerySubList
-                label={"Theme Elements"}
-                title={"Pages that every website needs."}
-                page1={"Accessories"}
-                page2={"Camera"}
-                page3={"Headphone"}
-                page4={"Gamepad"}
-                page5={"Laptop"}
-                page6={"Mobile"}
-            />
+        <footer className="x-padding">
+            <div className="footer-content">
+                <div className="footer_sections location-section">
+                    <p className="location-title ">17 Princess Road, London, Greater London</p>
+                </div>
+                <div className="footer_sections footer-details">
+                    <p className="details-head">Got Question? Call us 24/7</p>
+                    <p className="custom-header"><span>[80] 1017 197</span></p>
+                    <p className="location-title">17 Princess Road, London, Greater London NW1 8JR, UK</p>
+                    <button> <IoLocationOutline />View on map</button>
+                </div>
+                <div className="footer_sections footer-details">
+                    <p className="details-head">We Using</p>
+                    <p className="custom-header">Safe Payments</p>
+                    <p className="secured-by">Secured by:</p>
+                </div>
+                <div className="footer_sections">
+                    <GallerySubList label={'Quick Links'} page1={'Support Center'} page2={'Term & Conditions'} page3={'Shipping'} page4={'Privacy Policy'} page5={'Help'} page6={'Products Return'} page7={'FAQS'} />
+                </div>
+                <div className="footer_sections">
+                    <GallerySubList label={'Our Stores'} page1={'New York'} page2={'London SF'} page3={'Cockfosters BP'} page4={'Los Angeles'} page5={'Chicago'} page6={'Las Vegas'} page7={'Albarto'} />
+                </div>
+                <button className="back-top">back top <FaArrowRightLong /></button>
+            </div>
+            <div className="copy-rights x-padding">
+                <p> &copy; 2021 XpeedStudio All Rights Reserved </p>
+                <p> Allow payment base on </p>
+            </div>
         </footer>
     );
 }

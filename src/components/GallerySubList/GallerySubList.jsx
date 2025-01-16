@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 
-export default function GallerySubList({ label,title, page1, page2, page3, page4, page5, page6 }) {
+export default function GallerySubList({ label,title, page1, page2, page3, page4, page5, page6,page7 }) {
     return (
         <>
             <ul className="gallery-sub-list">
-                <h6>{label}</h6>
+                <p className="custom-header">{label}</p>
                 <span>{title}</span>
                 <li>
                     <Link to={page1}>{page1}</Link>
@@ -23,6 +23,9 @@ export default function GallerySubList({ label,title, page1, page2, page3, page4
                 </li>
                 <li>
                     <Link to={page6}>{page6}</Link>
+                </li>
+                <li>
+                    <Link to={page7}>{page7}</Link>
                 </li>
             </ul>
         </>
