@@ -6,8 +6,22 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../components/Logo/Logo";
 import { IoIosArrowDown } from "react-icons/io";
-import GallerySubList from "../../components/GallerySubList/GallerySubList";
-// import "./navbar.scss";
+import Select from "react-select";
+import SelectMenu from "../../components/SelectMenu/SelectMenu";
+import SearchComponent from "../../components/SearchComponent/SearchComponent";
+
+
+const categoryOptions = [
+    {value:'electronics',label:'Electronics'},
+    {value:'menFashion',label:"Men's Fashion"},
+    {value:'womenFashion',label:"Women's Fashion"},
+    {value:'security',label:'Office & Security'},
+    {value:'camera',label:'Camera'},
+    {value:'drone',label:'Drone'},
+    {value:'gamepad',label:'Gamepad'},
+    {value:'mobile',label:'Mobile'},
+    {value:'speaker',label:'Speaker'},
+]
 
 export default function Navbar() {
     return (
@@ -65,16 +79,29 @@ export default function Navbar() {
                         </li>
                     </ul>
                     <div className="nav-icons">
-                        <NavLink to={"wishlist"}>
+                        <Link to={"wishlist"}>
                             <div className="liked-icon">
                                 <div className="like-notify">0</div>
                                 <FaRegHeart />
                             </div>
-                        </NavLink>
+                        </Link>
                         <div className="cart-icon">
                             <div className="cart-notify">0</div>
                             <SlHandbag />
                         </div>
+                    </div>
+                </div>
+                <div className="search-section x-padding">
+                    <div className="select-category">
+                        {/* <Select isMulti className="select_input" options={categoryOptions} placeholder='Categories'/> */}
+                        <SelectMenu />
+                    </div>
+                    <div className="serach-items">
+                        <SearchComponent />
+                    </div>
+                    <div className="black-friday">
+                        <p>Black Friday</p>
+                        <span>Get 45% Off!</span>
                     </div>
                 </div>
             </nav>

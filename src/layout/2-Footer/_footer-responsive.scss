@@ -1,0 +1,15 @@
+
+@media (max-width:1024px) {
+    footer {
+        .footer-content{
+            flex-wrap: wrap;
+            .footer_sections{
+                width: calc((100% - 3rem)  / 3);
+            }
+        }
+    }
+}
+
+@media (max-width:1024px) {
+
+}
