@@ -1,5 +1,6 @@
 header {
     margin-bottom: 1rem;
+    box-shadow: 0em 0.3em 0.4em #2d2d2d2d;
     nav {
         .auth-section {
             background-color: #f5f5f5;
@@ -45,7 +46,6 @@ header {
             justify-content: space-between;
             align-items: center;
             padding-block: 1em;
-            // box-shadow: 0em 0.3em 1em #2d2d2d2d;
             .logo {
                 .anime-logo {
                     display: inline-flex;
@@ -69,7 +69,7 @@ header {
                     rotate: 3deg;
                 }
             }
-        
+
             ul {
                 display: flex;
                 gap: 1em;
@@ -100,7 +100,7 @@ header {
                         }
                     }
                     ul {
-                        display: flex;
+                        // display: flex;
                         gap: 1em;
                         flex-direction: column;
                         position: absolute;
@@ -129,7 +129,12 @@ header {
             }
             .nav-icons {
                 display: flex;
+                align-items: center;
                 gap: 1em;
+                .menuIcon {
+                    display: none;
+                    margin-right: 4rem;
+                }
                 .liked-icon,
                 .cart-icon {
                     position: relative;
@@ -162,15 +167,12 @@ header {
             justify-content: center;
             gap: 2em;
             padding-block: 1em;
-            box-shadow: 0em 0.3em 0.4em #2d2d2d2d;
-            .select-category , .serach-items , .black-friday {
+            flex-wrap: wrap;
+            // box-shadow: 0em 0.3em 0.4em #2d2d2d2d;
+            .select-category,
+            .serach-items,
+            .black-friday {
                 width: calc((100% - 4rem) / 4);
-            }
-            .select-category {
-
-            }
-            .serach-items {
-                
             }
 
             .serach-items {
@@ -179,6 +181,7 @@ header {
                 align-items: center;
                 border: 1px solid #2d2d2d2d;
                 border-radius: 0.3em;
+                position: relative;
                 .search_bar {
                     flex-grow: 1;
                     height: 100%;
@@ -191,7 +194,6 @@ header {
                         outline: none;
                         flex-grow: 1;
                         &::placeholder {
-
                         }
                     }
                 }
@@ -203,7 +205,7 @@ header {
                     font-size: 0.8rem;
                     &-header {
                         padding: 0.8em;
-                        background-color:  transparent;
+                        background-color: transparent;
                         color: #2d2d2dd2;
                         border-left: 2px solid #2d2d2d2d;
                         border-radius: 0.2em;
@@ -211,7 +213,7 @@ header {
                         display: flex;
                         justify-content: space-evenly;
                         align-items: center;
-                
+
                         .arrow {
                             width: 10px;
                             height: 10px;
@@ -219,13 +221,13 @@ header {
                             border-bottom: 2px solid #2d2d2dd2;
                             transform: rotate(45deg);
                             transition: transform 0.3s;
-                
+
                             &.open {
                                 transform: rotate(-135deg);
                             }
                         }
                     }
-                
+
                     &-menu {
                         position: absolute;
                         top: 100%;
@@ -236,29 +238,89 @@ header {
                         border-radius: 0.2em;
                         border-top: none;
                         overflow-y: auto;
-                
+
                         .dropdown_search-item {
                             padding: 0.3em;
                             border-bottom: 1px solid #73737328;
                             cursor: pointer;
                             transition: color 0.3s;
-                
+
                             &:hover {
                                 color: $main-color;
                             }
                         }
                     }
                 }
-                
+
                 .search-button {
                     display: flex;
-                    padding: 1.3em ;
+                    padding: 1.3em;
                     background-color: $main-color;
                     cursor: pointer;
                     svg {
-                        color: #FFF;
+                        color: #fff;
                     }
+                }
 
+                .search-box {
+                    position: absolute;
+                    width: 100%;
+                    height: 15em;
+                    border: 1px solid rgba($color: #000000, $alpha: 0.2);
+                    top: 4em;
+                    border-radius: 0.5rem;
+                    padding: 1rem;
+                    background-color: #fff;
+                    overflow-y: auto;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0.5rem;
+                    scroll-behavior: smooth;
+                    &::-webkit-scrollbar {
+                        width: 0.3rem;
+                    }
+                    &::-webkit-scrollbar-thumb{
+                        background-color: $main-color;
+                        border-radius: 1rem;
+
+                    }
+                    &::-webkit-scrollbar-track {
+                        background-color: rgba($color: $main-color, $alpha: 0.2);
+                    }
+                    &-item {
+                        display: flex;
+                        padding: 0.4rem;
+                        gap: 0.5rem;
+                        border: 1px solid rgba($color: #000000, $alpha: 0.2);
+                        border-radius: 0.4rem;
+                        &-image {
+                            padding: 0.2rem;
+                            width: 10rem;
+                            border-right: 1px solid rgba($color: #000000, $alpha: 0.2);
+                            padding-right: 0.3rem;
+                            img {
+                                width: 100%;
+                                object-fit: cover;
+                            }
+                        }
+                        &-content {
+                            display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            h6 {
+                                font-weight: 600;
+                                margin-bottom: 1rem;
+                            }
+                            p {
+                               display: -webkit-box;
+                            -webkit-box-orient: vertical;
+                            -webkit-line-clamp: 2;
+                            overflow: hidden;
+                            font-size: 0.9rem;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -283,14 +345,12 @@ header {
                 }
                 &:hover {
                     background-color: #000;
-                    p , span {
-                        color: #FFF;
+                    p,
+                    span {
+                        color: #fff;
                     }
                 }
             }
         }
     }
 }
-
-
-

@@ -1,16 +1,16 @@
 @media (max-width: 1240px) {
     .x-padding {
-        padding-inline: 8em;
+        padding-inline: 7em;
     }
 }
 @media (max-width: 1130px) {
     .x-padding {
-        padding-inline: 6em;
+        padding-inline: 5em;
     }
 }
 @media (max-width: 1040px) {
     .x-padding {
-        padding-inline: 5em;
+        padding-inline: 3em;
     }
     h1 {
         font-size: 2.3rem;
@@ -34,4 +34,10 @@
         font-size: 1rem;
     }
     
+}
+
+@media (max-width:500px) {
+    .x-padding {
+        padding-inline: 1rem;
+    }
 }

@@ -9,19 +9,21 @@ import { IoIosArrowDown } from "react-icons/io";
 import Select from "react-select";
 import SelectMenu from "../../components/SelectMenu/SelectMenu";
 import SearchComponent from "../../components/SearchComponent/SearchComponent";
-
+import GallerySubList from "../../components/GallerySubList/GallerySubList";
+import SearchBox from "../../components/searchBox/SearchBox";
+import { HiOutlineMenu } from "react-icons/hi";
 
 const categoryOptions = [
-    {value:'electronics',label:'Electronics'},
-    {value:'menFashion',label:"Men's Fashion"},
-    {value:'womenFashion',label:"Women's Fashion"},
-    {value:'security',label:'Office & Security'},
-    {value:'camera',label:'Camera'},
-    {value:'drone',label:'Drone'},
-    {value:'gamepad',label:'Gamepad'},
-    {value:'mobile',label:'Mobile'},
-    {value:'speaker',label:'Speaker'},
-]
+    { value: "electronics", label: "Electronics" },
+    { value: "menFashion", label: "Men's Fashion" },
+    { value: "womenFashion", label: "Women's Fashion" },
+    { value: "security", label: "Office & Security" },
+    { value: "camera", label: "Camera" },
+    { value: "drone", label: "Drone" },
+    { value: "gamepad", label: "Gamepad" },
+    { value: "mobile", label: "Mobile" },
+    { value: "speaker", label: "Speaker" },
+];
 
 export default function Navbar() {
     return (
@@ -51,34 +53,70 @@ export default function Navbar() {
                 <div className="nav-section x-padding">
                     <Logo />
                     <ul>
-                        <li><NavLink to={"/"}>Home <IoIosArrowDown /></NavLink></li>
+                        <li>
+                            <NavLink to={"/"}>
+                                Home <IoIosArrowDown />
+                            </NavLink>
+                        </li>
                         <li className="nav_lists">
-                            <NavLink to={"/pages"}>pages <IoIosArrowDown /></NavLink>
+                            <NavLink to={"/pages"}>
+                                pages <IoIosArrowDown />
+                            </NavLink>
                             <ul>
-                                <li><Link to={"about-us"}>About Us</Link></li>
-                                <li><Link to={"contact"}>Contact</Link></li>
-                                <li><Link to={"fqa"}>FQA</Link></li>
-                                <li><Link to={"terms-and-conditions"}>Terms and Conditions</Link></li>
-                                <li><Link to={"products"}>Products</Link></li>
+                                <li>
+                                    <Link to={"about-us"}>About Us</Link>
+                                </li>
+                                <li>
+                                    <Link to={"contact"}>Contact</Link>
+                                </li>
+                                <li>
+                                    <Link to={"fqa"}>FQA</Link>
+                                </li>
+                                <li>
+                                    <Link to={"terms-and-conditions"}>Terms and Conditions</Link>
+                                </li>
+                                <li>
+                                    <Link to={"products"}>Products</Link>
+                                </li>
                             </ul>
                         </li>
                         <li className="nav_lists">
-                            <NavLink to={"/shop"}>shop <IoIosArrowDown /></NavLink>
+                            <NavLink to={"/shop"}>
+                                shop <IoIosArrowDown />
+                            </NavLink>
                             <ul>
-                                <li><Link to={"shop"}>Shop</Link></li>
-                                <li><Link to={"wishlist"}>Wishlist</Link></li>
-                                <li><Link to={"track-order"}>Track Order</Link></li>
+                                <li>
+                                    <Link to={"shop"}>Shop</Link>
+                                </li>
+                                <li>
+                                    <Link to={"wishlist"}>Wishlist</Link>
+                                </li>
+                                <li>
+                                    <Link to={"track-order"}>Track Order</Link>
+                                </li>
                             </ul>
                         </li>
                         <li className="nav_lists">
-                            <NavLink to={"/blogs"}>blogs <IoIosArrowDown /></NavLink>
+                            <NavLink to={"/blogs"}>
+                                blogs <IoIosArrowDown />
+                            </NavLink>
                             <ul>
-                                <li><Link to={"blogs"}>Blogs</Link></li>
-                                <li><Link to={"single-blog"}>Single Blog</Link></li>
+                                <li>
+                                    <Link to={"blogs"}>Blogs</Link>
+                                </li>
+                                <li>
+                                    <Link to={"single-blog"}>Single Blog</Link>
+                                </li>
                             </ul>
+                        </li>
+                        <li className="nav_lists">
+                            <NavLink to={"/gallery"}>
+                                Gallery <IoIosArrowDown />
+                            </NavLink>
                         </li>
                     </ul>
                     <div className="nav-icons">
+                        <HiOutlineMenu className="menuIcon" />
                         <Link to={"wishlist"}>
                             <div className="liked-icon">
                                 <div className="like-notify">0</div>
@@ -98,6 +136,7 @@ export default function Navbar() {
                     </div>
                     <div className="serach-items">
                         <SearchComponent />
+                        {/* <SearchBox /> */}
                     </div>
                     <div className="black-friday">
                         <p>Black Friday</p>
