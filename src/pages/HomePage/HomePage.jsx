@@ -1,7 +1,12 @@
+import ContactBar from "../../components/contactBar/ContactBar";
+
 export default function HomePage() {
     return (
         <>
-          <h2 className="page-test">Home Page</h2>
+            <main className="home-page ">
+                <section className="page-test hero-section x-padding"><div className="hero-section"></div></section>
+                <ContactBar />
+            </main>
         </>
     );
 }

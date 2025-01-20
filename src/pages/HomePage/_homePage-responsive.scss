@@ -1,0 +1,13 @@
+@media(max-width:1000px){
+    .home-page {
+        .contact-bar{
+            &-layout {
+                width: 100%;
+                padding: 2rem;
+                &.send-email {
+                    
+                }
+            }
+        }
+    }
+}
