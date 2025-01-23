@@ -3,7 +3,7 @@ import React from "react";
 export default function Sponsors() {
     return (
         <>
-            <div className="sponsors-section x-padding">
+            <section className="sponsors-section x-padding">
                 <div className="sponsors-section-icons">
                     <img src="./src/assets/images/Sponsors/html-logo.png" alt="" />
                 </div>
@@ -19,7 +19,7 @@ export default function Sponsors() {
                 <div className="sponsors-section-icons">
                     <img src="./src/assets/images/Sponsors/react-logo.png" alt="" />
                 </div>
-            </div>
+            </section>
         </>
     );
 }

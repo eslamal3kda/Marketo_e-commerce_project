@@ -29,6 +29,7 @@ export default function Footer() {
                     </div>
                     <div className="footer-content-sections-single">
                         <GallerySubList
+                            navigation
                             label={"Quick Links"}
                             page1={"Support Center"}
                             page2={"Term & Conditions"}
@@ -42,13 +43,13 @@ export default function Footer() {
                     <div className="footer-content-sections-single">
                         <GallerySubList
                             label={"Our Stores"}
-                            page1={"New York"}
-                            page2={"London SF"}
-                            page3={"Cockfosters BP"}
-                            page4={"Los Angeles"}
-                            page5={"Chicago"}
-                            page6={"Las Vegas"}
-                            page7={"Albarto"}
+                            page1={"Alexandria"}
+                            page2={"Cairo"}
+                            page3={"Buhaira"}
+                            page4={"Tanta"}
+                            page5={"Zagazig"}
+                            page6={"Mansoura"}
+                            page7={"Damitta"}
                         />
                     </div>
                 </div>

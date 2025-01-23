@@ -51,9 +51,10 @@ footer {
                     flex-direction: column;
                     gap: 0.7rem;
                     li {
-                        a {
+                        & ,a {
                             color: #777;
                             transition: 0.5s;
+                            cursor: pointer;
                             &:hover {
                                 color: $main-color;
                             }
