@@ -88,3 +88,11 @@
         }
     }
 }
+
+@media(max-width:768px){
+        .pagination-section{
+            .single-pagination-container {
+                width: 100%;
+            }
+        }
+}

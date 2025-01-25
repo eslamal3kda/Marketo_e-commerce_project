@@ -10,8 +10,11 @@
 @import '../components/EmailSubmitInput/emailSubmitInput';
 @import '../components/paginationSection/paginationSection';
 @import '../components/sponsors/sponsors';
+@import '../components/OfferComponent/offerComponent';
+@import '../components/featuredProducts/featuredProducts';
+@import '../components/ProductCard/productCard';
 @import '../pages/HomePage/homePage-responsive';
 
 .page-test {
-    height: 80vh;
+    min-height: 80vh;
 }

@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { FaRegArrowAltCircleLeft, FaRegArrowAltCircleRight } from "react-icons/fa";
 import HomePaginationItem from "../homePaginationItem/HomePaginationItem";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { EffectFade, Navigation, Pagination } from "swiper/modules";
 
 export default function SinglePaginationContainer({ title, oldPrice }) {
     const data = [1, 2, 3, 4, 5, 6];
