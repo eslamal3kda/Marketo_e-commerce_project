@@ -1,11 +1,22 @@
+@media (max-width: 1320px) {
+    .container{
+        margin-inline:6rem ;
+    }
+}
 @media (max-width: 1240px) {
     .x-padding {
-        padding-inline: 5em;
+        padding-inline: 4rem;
+    }
+    .container{
+        margin-inline:4rem ;
     }
 }
 @media (max-width: 1040px) {
     .x-padding {
-        padding-inline: 2em;
+        padding-inline: 2rem;
+    }
+    .container{
+        margin-inline:2rem ;
     }
     h1 {
         font-size: 2.3rem;
@@ -34,5 +45,8 @@
 @media (max-width:500px) {
     .x-padding {
         padding-inline: 1rem;
+    }
+    .container{
+        margin-inline:1rem ;
     }
 }

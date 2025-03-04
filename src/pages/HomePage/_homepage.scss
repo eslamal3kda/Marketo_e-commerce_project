@@ -1,11 +1,72 @@
 .home-page {
-    .hero-section {
-        width: 100%;
-        min-height: 95vh;
-        background-image: url('../assets/images/Hero-background.jpg') ;
-        background-size: cover;
-        background-position: center;
-    }
+    // .hero-section {
+    //     width: 100%;
+    //     padding: 2rem 0;
+    //     height: 95vh;
+    //     background-image: url('../assets/images/Hero-background.jpg') ;
+    //     background-size: cover;
+    //     background-position: center;
+    //     display: flex;
+    //     justify-content: center;
+    //     align-items: center;
+    //     &-content {
+    //         width: 100%;
+    //         margin-block: auto;
+    //         height:100%;
+    //         display: flex;
+    //         gap: 1rem;
+    //         align-items: center;
+    //         justify-content: space-between;
+    //         img {
+    //             width: 250px;
+    //         }
+    //         .img-one {
+    //             animation: img-from-left 1s 1s both;
+    //         }
+    //         .img-two {
+    //             animation: img-from-right 1s 2s both;
+    //         }
+    //         &-title {
+    //             text-align: center;
+    //             h2 {
+    //                 color: $main-color;
+    //                 font-weight: 100;
+    //                 font-size: 1.8rem;
+    //                 animation: img-from-top 1s 3s both;
+    //             }
+    //             h3{
+    //                 margin-top: 16px;
+    //                 color: #1c1c24;
+    //                 font-size: 3rem;
+    //                 animation: img-from-down 1s 3s both;
+    //             }
+    //         }
+    //         &-btns {
+    //             margin-top: 24px;
+    //             display: flex;
+    //             gap: 16px;
+    //             justify-content: center;
+    //             button {
+    //                 background-color: transparent;
+    //                 border-color: $main-color;
+    //                 color: $main-color;
+    //                 transition: 0.4s;
+    //                 position: relative;
+    //                 &:hover {
+    //                     background-color: #000;
+    //                     color: #fff;
+    //                     border: none;
+    //                 }
+    //             }
+    //             .btn-one {
+    //                 animation: img-from-left 1s 4s both;
+    //             }
+    //             .btn-two {
+    //                 animation: img-from-right 1s 4s both;
+    //             }
+    //         }
+    //     }
+    // }
     .contact-bar {
         min-height: 60vh;
         background-image: url("../assets/images/doodle_background.jpg");
@@ -77,3 +138,44 @@
         }
     }
 }
+
+// @keyframes img-from-left {
+//     0% {
+//         transform: translateX(-100%);
+//         opacity: 0;
+//     }
+//     100%{
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+// }
+// @keyframes img-from-right {
+//     0% {
+//         transform: translateX(100%);
+//         opacity: 0;
+//     }
+//     100%{
+//         transform: translateX(0);
+//         opacity: 1;
+//     }
+// }
+// @keyframes img-from-top {
+//     0% {
+//         transform: translateY(-100%);
+//         opacity: 0;
+//     }
+//     100%{
+//         transform: translateY(0);
+//         opacity: 1;
+//     }
+// }
+// @keyframes img-from-down {
+//     0% {
+//         transform: translateY(100%);
+//         opacity: 0;
+//     }
+//     100%{
+//         transform: translateY(0);
+//         opacity: 1;
+//     }
+// }
