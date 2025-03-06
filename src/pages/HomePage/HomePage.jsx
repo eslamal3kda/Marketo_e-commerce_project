@@ -1,3 +1,4 @@
+
 import ContactBar from "../../components/contactBar/ContactBar";
 import CustomBTN from "../../components/customBTN/CustomBTN";
 import FeaturedProducts from "../../components/featuredProducts/FeaturedProducts";
@@ -5,6 +6,7 @@ import HeroSection from "../../components/HeroSection/HeroSection";
 import PaginationSection from "../../components/paginationSection/PaginationSection";
 import ProductCard from "../../components/ProductCard/ProductCard";
 import Sponsors from "../../components/sponsors/Sponsors";
+import TodayGadgetsSection from "../../components/TodayGadgetsSection/TodayGadgetsSection";
 
 export default function HomePage() {
     return (
@@ -12,7 +14,7 @@ export default function HomePage() {
             <main className="home-page ">
                 <HeroSection />
                 <FeaturedProducts />
-                <div className="page-test x-padding" style={{ display: "flex", justifyContent: "", alignItems: "center", gap: "2rem" }}>
+                {/* <div className="page-test x-padding" style={{ display: "flex", justifyContent: "", alignItems: "center", gap: "2rem" }}>
                     <ProductCard
                         title={"Mobile"}
                         productName={"Apple iPhone 6s"}
@@ -49,7 +51,8 @@ export default function HomePage() {
                         rating
                         discount={""}
                     />
-                </div>
+                </div> */}
+                <TodayGadgetsSection />
                 <PaginationSection />
                 <Sponsors />
                 <ContactBar />

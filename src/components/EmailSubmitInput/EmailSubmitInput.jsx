@@ -1,5 +1,6 @@
 import { Field, Form, Formik } from 'formik'
 import React from 'react'
+import CustomBTN from '../customBTN/CustomBTN'
 
 export default function EmailSubmitInput() {
   return (
@@ -8,7 +9,8 @@ export default function EmailSubmitInput() {
         <Formik>
           <Form>
             <Field placeholder="Enter Email.." />
-            <button type=''>Submit</button>
+            <CustomBTN title="submit"/>
+            {/* <button type=''>Submit</button> */}
           </Form>
         </Formik>
       </div>

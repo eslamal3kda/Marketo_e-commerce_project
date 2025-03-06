@@ -1,6 +1,6 @@
 .email-submit-input {
     width: 100%;
-    height: 4rem;
+    height: 3.5rem;
     border: 1px solid #2d2d2d;
     border-radius:3rem ;
     display: flex;
@@ -22,18 +22,20 @@
             padding-inline-end: 10rem;
         }
         button {
-            width: 25%;
             position: absolute;
             right: 0.5rem;
             top: 50%;
             translate:0 -50%;
-            padding: 1rem ;
+            padding: 0.7rem 2rem;
             border-radius: 2rem;
             cursor: pointer;
-            background-color: $main-color;
+            background-color: $offer-color;
             color: #FFF;
             font-size: 1rem;
-
+            transition: 00.3s;
+            &:hover{
+                background-color: #2d2d2d;
+            }
         }
     }
     }

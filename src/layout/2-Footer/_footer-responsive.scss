@@ -23,11 +23,11 @@
         .footer-content {
             &-sections {
                 &-single {
+                    gap: 1rem;
+                    width: calc((100% - 1.5rem) / 2);
                     &-location{
                         display: none;
                     }
-                    gap: 1rem;
-                    width: calc((100% - 1.5rem) / 2);
                 }
             }
 

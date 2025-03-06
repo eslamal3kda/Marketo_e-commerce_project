@@ -9,30 +9,48 @@
     position: relative;
     &-image {
         width: 100%;
-        height: 12.5rem;
-        border: 1px solid #2d2d2d2d;
-        // position: relative;
-        // transition: 0.5s;
+        height: 13.5rem;
         cursor: pointer;
+        position: relative;
+        overflow: hidden;
         img{
             width: 100%;
             height: 100%;
             transition: 0.3s;
+        }
+        &:hover &-icons {
+            bottom: 0;
+            opacity: 1;
         }
         &-icons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             align-items: center;
-            // position: absolute;
-            // bottom: -5rem;
-            // left: 50%;
-            translate: 0 2rem;
-            .test-icon {
-                width: 1.7rem;
-                height: 1.7rem;
+            position: absolute;
+            transition: 0.5s;
+            bottom: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            opacity: 0;
+            .single-icon {
+                width: 36px;
+                height: 36px;
                 border-radius: 50%;
-                background-color: #2d2d2dd2;
+                transition: 0.3s;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                &:hover {
+                    background-color: $offer-color;
+                    svg {
+                        color: #FFF;
+                    }
+                }
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
         &:hover{
@@ -40,6 +58,7 @@
                 opacity: 0.8;
             }
             &-icons {
+
                 translate:0 -3rem;
             }
         }
@@ -64,18 +83,24 @@
             }
         }
     }
+    &-image:hover .product-card-rating {
+        opacity: 1;
+        top: 0;
+    }
     &-rating {
         position: absolute;
         display: flex;
         align-items: center;
-        gap: 0.5rem;
+        gap: 0.2rem;
         right: 1rem;
-        top: 1rem;
-        &-icon {
-            width: 1rem;
-            height: 1rem;
+        transition: 0.3s;
+        top: -3rem;
+        opacity: 0;
+        svg {
+            width: 20px;
+            height: 20px;
             border-radius: 50%;
-            background-color: yellow;
+            color: yellow;
         }
     }
 }

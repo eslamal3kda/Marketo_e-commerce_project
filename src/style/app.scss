@@ -16,7 +16,14 @@
 @import '../pages/HomePage/homePage-responsive';
 @import '../components/HeroSection/heroSection';
 @import '../components/HeroSection/heroSection-responsive';
+@import '../components/TodayGadgetsSection/todayGadgetsSection.scss';
+
 
 .page-test {
     min-height: 80vh;
+}
+
+.page-test  {
+    display: flex;
+    flex-wrap: wrap;
 }
