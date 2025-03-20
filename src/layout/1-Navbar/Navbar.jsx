@@ -6,24 +6,24 @@ import { TbTruckDelivery } from "react-icons/tb";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "../../components/Logo/Logo";
 import { IoIosArrowDown } from "react-icons/io";
-import Select from "react-select";
+// import Select from "react-select";
 import SelectMenu from "../../components/SelectMenu/SelectMenu";
 import SearchComponent from "../../components/SearchComponent/SearchComponent";
-import GallerySubList from "../../components/GallerySubList/GallerySubList";
-import SearchBox from "../../components/searchBox/SearchBox";
+// import GallerySubList from "../../components/GallerySubList/GallerySubList";
+// import SearchBox from "../../components/searchBox/SearchBox";
 import { HiOutlineMenu } from "react-icons/hi";
 
-const categoryOptions = [
-    { value: "electronics", label: "Electronics" },
-    { value: "menFashion", label: "Men's Fashion" },
-    { value: "womenFashion", label: "Women's Fashion" },
-    { value: "security", label: "Office & Security" },
-    { value: "camera", label: "Camera" },
-    { value: "drone", label: "Drone" },
-    { value: "gamepad", label: "Gamepad" },
-    { value: "mobile", label: "Mobile" },
-    { value: "speaker", label: "Speaker" },
-];
+// const categoryOptions = [
+//     { value: "electronics", label: "Electronics" },
+//     { value: "menFashion", label: "Men's Fashion" },
+//     { value: "womenFashion", label: "Women's Fashion" },
+//     { value: "security", label: "Office & Security" },
+//     { value: "camera", label: "Camera" },
+//     { value: "drone", label: "Drone" },
+//     { value: "gamepad", label: "Gamepad" },
+//     { value: "mobile", label: "Mobile" },
+//     { value: "speaker", label: "Speaker" },
+// ];
 
 export default function Navbar() {
     return (

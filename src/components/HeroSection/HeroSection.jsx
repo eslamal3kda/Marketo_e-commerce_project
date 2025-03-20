@@ -1,10 +1,23 @@
 import React from "react";
-import CustomBTN from "../customBTN/CustomBTN";
+// import CustomBTN from "../customBTN/CustomBTN";
+import { Swiper, SwiperSlide } from "swiper/react";
+import HeroSectionSlide from "../HeroSectionSlider/HeroSectionSlide";
 
 export default function HeroSection() {
     return (
         <section className="hero-section">
-            <div className="container">
+            <Swiper >
+                <SwiperSlide>
+                    <HeroSectionSlide key={1} imgOne={"./src/assets/images/"} imgTwo={""} />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <HeroSectionSlide key={2} imgOne={""} imgTwo={""} />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <HeroSectionSlide key={3} imgOne={""} imgTwo={""} />
+                </SwiperSlide>
+            </Swiper>
+            {/* <div className="container">
                 <div className=" hero-section-content">
                     <img className="img-one" src="src/assets/images/headphone_1.png" alt="" />
                     <div className="hero-section-content-title">
@@ -17,7 +30,7 @@ export default function HeroSection() {
                     </div>
                     <img className="img-two" src="src/assets/images/speaker_1.png" alt="sda" />
                 </div>
-            </div>
+            </div> */}
         </section>
     );
 }
