@@ -3,6 +3,7 @@ import FilterTabs from "../FilterTabs/FilterTabs";
 import ProductCard from "../ProductCard/ProductCard";
 
 export default function BestDeals() {
+    const products = [{ id: 1, productName: "", imageURL: "", }];
     return (
         <>
             <section className=" best-deals-section">

@@ -30,7 +30,8 @@
                     align-items: center;
                     justify-content: center;
                     &:hover {
-                        box-shadow: 0 0 12px -6px;
+                        box-shadow: 0 2px 20px 0 rgba(144, 144, 144, 0.2);;
+                        z-index: 2;
                     }
                     &-image {
                         height: 150px;

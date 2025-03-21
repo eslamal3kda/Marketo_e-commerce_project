@@ -203,6 +203,7 @@ header {
                     position: relative;
                     font-family: Arial, sans-serif;
                     font-size: 0.8rem;
+                    z-index: 3;
                     &-header {
                         padding: 0.8em;
                         background-color: transparent;
@@ -238,7 +239,7 @@ header {
                         border-radius: 0.2em;
                         border-top: none;
                         overflow-y: auto;
-
+                        
                         .dropdown_search-item {
                             padding: 0.3em;
                             border-bottom: 1px solid #73737328;
