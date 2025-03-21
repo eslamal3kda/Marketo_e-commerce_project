@@ -9,7 +9,7 @@ export default function HeroSection() {
     const heroProducts = [
         { id: 1, imgOne: "./src/assets/images/headphone_1.png", imgTwo: "./src/assets/images/speaker_1.png" },
         { id: 2, imgOne: "./src/assets/images/watch_2.png", imgTwo: "./src/assets/images/speaker_2.png" },
-        { id: 3, imgOne: "./src/assets/images/speaker.png", imgTwo: "./src/assets/images/speaker_1.png" },
+        { id: 3, imgOne: "./src/assets/images/WaterproofCamera.png", imgTwo: "./src/assets/images/speaker_1.png" },
     ];
     return (
         <section className="hero-section">

@@ -48,7 +48,6 @@
             &-offer,
             &-noOffer {
                 width: calc((100% - 2rem) / 2);
-                height: 85vh;
                 position: relative;
                 cursor: pointer;
                 img {
@@ -62,6 +61,7 @@
             }
             &-offer {
                 overflow: hidden;
+                height: 590px;
                 &-product {
                     width: 100%;
                     height: 100%;
@@ -89,7 +89,7 @@
                     overflow: hidden;
                     background-color: #f7f7f7;
                     width: calc((100% - 2rem) / 2);
-                    height: calc((100% - 2rem) / 2);
+                    height: 279px;
                     &:hover , .featured-products-navigation-button{
                         img {
                             scale: 1.1;
@@ -113,18 +113,24 @@
     }
 }
 
-@media (max-width: 950px) {
+
+@media(max-width:767px){
     .featured-products-section {
-        .featured-products {
+        .featured-products{
             &-content {
-                &-offer,
+                &-offer {
+                    width: 100%;
+                    height: 500px;
+                    .offer {
+                        bottom: 4rem;
+                        left: 2rem;
+                    }
+                }
                 &-noOffer {
                     width: 100%;
-                }
-                &-offer-product {
-                    .featured-products-content-header {
-                        top: 4rem;
-                        left: -4rem;
+                    &-product {
+                        width: 100%;
+                        height: 320px;
                     }
                 }
             }
