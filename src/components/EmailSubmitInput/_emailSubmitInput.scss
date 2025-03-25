@@ -1,66 +1,39 @@
-.email-submit-input {
-    width: 100%;
-    height: 3.5rem;
-    border: 1px solid #2d2d2d;
-    border-radius:3rem ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    position: relative;
-    form {
-        width: 100%;
-        height: 100%;
-        background-color:#FFF;
-        input {
-            padding: 1rem;
-            width: 100%;
-            height: 100%;
-            background-color: transparent;
-            border: 0;
-            outline: 0;
-            padding-inline-end: 10rem;
-        }
-        button {
-            position: absolute;
-            right: 0.5rem;
-            top: 50%;
-            translate:0 -50%;
-            padding: 0.7rem 2rem;
-            border-radius: 2rem;
-            cursor: pointer;
-            background-color: $offer-color;
-            color: #FFF;
-            font-size: 1rem;
-            transition: 00.3s;
-            &:hover{
-                background-color: #2d2d2d;
-            }
-        }
-    }
-    }
 
-@media(max-width:1024px) {
-    .email-submit-input {
-        height: 3.6rem; 
-        form {
-            button {
-                padding: 0.6rem;
-                width: 20%;
-            }
-        }
+.email-submit-input {
+    width: 450px;
+    height: 45px;
+    border-radius: 1.5rem;
+    position: relative;
+    overflow: hidden;
+    border: 1px solid #2d2d2d5d;
+    input {
+        width: 100%;
+        height: 45px;
+        padding: 10px;
+        border: none;
+        outline: 0;
+    }
+    button {
+        position:absolute; 
+        height: 80%;
+        right:4px;
+        bottom: 50%;
+        transform: translateY(50%);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 2rem;
     }
 }
-@media(max-width:768px) {
+
+@media(max-width:550px){
     .email-submit-input {
-        form {
-            input{
-                padding-inline-end: 8rem;
-            }
-            button {
-                padding: 0.6rem;
-                width: 25%;
-            }
+        width: 100%;
+        input {
+            padding-inline-end: 90px;
+        }
+        button {
+            padding: 1rem;
         }
     }
 }

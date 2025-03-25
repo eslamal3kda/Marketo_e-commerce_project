@@ -146,6 +146,11 @@
 
 @media (max-width: 560px) {
     .today-gadget-section {
+        .today-gadget-header {
+            span {
+                font-size: 1rem;
+            }
+        }
         .today-gadget-content {
             &-products-without-offer {
                 min-height: 100vh;
@@ -158,8 +163,13 @@
                 }
             }
             &-products-with-offer {
-                margin-inline: 2rem;
                 height: 550px !important;
+                .product-card{
+                    padding: 0;
+                }
+                .offer{
+                    display: none;
+                }
             }
         }
     }

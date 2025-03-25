@@ -70,7 +70,7 @@ export default function Navbar() {
                                     <Link to={"contact"}>Contact</Link>
                                 </li>
                                 <li>
-                                    <Link to={"fqa"}>FQA</Link>
+                                    <Link to={"faq"}>FAQ</Link>
                                 </li>
                                 <li>
                                     <Link to={"terms-and-conditions"}>Terms and Conditions</Link>

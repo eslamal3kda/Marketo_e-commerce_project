@@ -18,7 +18,7 @@ export default function HomePage() {
                 <TodayGadgetsSection />
                 <PaginationSection />
                 <Sponsors />
-                <ContactBar />
+                <ContactBar homePageContactBar />
             </main>
         </>
     );
