@@ -3,11 +3,11 @@
         margin-block: 2rem;
         display: flex;
         flex-flow: row wrap;
-        gap: 1rem; 
+        gap: 2rem; 
         .list-container {
             background-color: #fafafa;
             padding: 2rem;
-            width: calc((100% - 1rem) / 2);
+            width: calc((100% - 2rem) / 2);
             li {
                 font-weight: 600;
                 margin-bottom: 16px;

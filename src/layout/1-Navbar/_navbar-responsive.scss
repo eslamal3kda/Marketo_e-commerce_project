@@ -37,3 +37,20 @@
         }
     }
 }
+
+@media(max-width:550px){
+    header {
+        nav {
+            .nav-section {
+                .nav-icons {
+                    .liked-icon, .cart-icon {
+                        display: none;
+                    }
+                    .menuIcon {
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}
