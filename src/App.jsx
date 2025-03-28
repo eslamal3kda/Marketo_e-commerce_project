@@ -5,6 +5,7 @@ import Layout from "./layout/Layout";
 import HomePage from "./pages/HomePage/HomePage";
 import FAQPage from "./pages/FAQPage/FaqPage";
 import ContactPage from "./pages/ContactPage/ContactPage";
+import TermsAndConditionsPage from "./pages/TermsAndConditionsPage/TermsAndConditionsPage";
 
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
                 { path: "/shop", element: <h2 className="page-test">shop Page</h2> },
                 { path: "/faq", element: <FAQPage /> },
                 { path: "/contact", element: <ContactPage /> },
+                { path: "/terms-and-conditions", element: <TermsAndConditionsPage /> },
                 { path: "/blogs", element: <h2 className="page-test">blogs Page</h2> },
                 { path: "/gallery", element: <h2 className="page-test">gallery Page</h2> },
                 { path: "/wishlist", element: <h2 className="page-test">Wishlist Page</h2> },
