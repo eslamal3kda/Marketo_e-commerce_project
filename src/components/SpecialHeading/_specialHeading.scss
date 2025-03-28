@@ -1,0 +1,22 @@
+.special-heading {
+    padding: 10px;
+    position: relative;
+    h2,h3 {
+        text-transform: capitalize;        
+    }
+    h2{
+        font-size: 16px;
+        font-weight: 100;
+        color: $main-color;
+        margin-bottom: 16px;
+    }
+    span {
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 100px;
+        color: #f5f4f4;
+        position: absolute;
+        z-index: -1;
+        top: -50%;
+    }
+}
