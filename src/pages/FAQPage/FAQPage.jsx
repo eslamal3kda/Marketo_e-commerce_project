@@ -53,7 +53,7 @@ export default function FAQPage() {
         },
     ];
     return (
-        <section className="faq-page">
+        <main className="faq-page">
             <div className="container">
                 <ol>
                     {FAQ.map((faq) => (
@@ -65,6 +65,6 @@ export default function FAQPage() {
                 </ol>
             </div>
             <ContactBar />
-        </section>
+        </main>
     );
 }
