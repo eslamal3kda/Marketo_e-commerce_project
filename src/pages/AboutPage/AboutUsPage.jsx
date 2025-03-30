@@ -1,15 +1,30 @@
 import React from "react";
 import ContactBar from "../../components/contactBar/ContactBar";
-import SpecialHeading from "../../components/SpecialHeading/SpecialHeading";
+// import SpecialHeading from "../../components/SpecialHeading/SpecialHeading";
+// import StatisticComponent from "../../components/StatisticComponent/StatisticComponent";
+import AboutPageSection from "../../components/AboutPageContent/AboutPageSection";
 
 export default function AboutUsPage() {
     return (
         <main className="about-page ">
-            <div className="container">
-                <h2>About Us Page</h2>
-                <SpecialHeading heading={"history"} title={"Creative and renovate fashion trends"} />
+            <AboutPageSection
+                history
+                heading={"history"}
+                headingTitle={"Creative and renovate fashion trends"}
+                aboutImg={"./src/assets/images/about_us_img_1.png"}
+                aboutParg={
+                    "Collaboratively administrate empowered markets via plug-and-play maintain networks. Dynamically usable procrastinate B2B users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI."
+                }
+            />
 
-            </div>
+            <AboutPageSection
+                vision
+                heading={"vision"}
+                headingTitle={"We are marketpress"}
+                aboutImg={"./src/assets/images/about_us_img_2.png"}
+                aboutParg={"Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI."}
+            />
+            <AboutPageSection team heading={"team"} headingTitle={"Meet with our Team"} />
             <ContactBar />
         </main>
     );
