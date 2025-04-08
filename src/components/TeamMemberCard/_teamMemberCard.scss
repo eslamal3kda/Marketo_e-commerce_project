@@ -14,6 +14,9 @@
         }
         &:hover .overlay {
             height: 100%;
+            svg {
+                opacity: 1;
+            }
         }
         .overlay {
             display: flex;
@@ -25,11 +28,13 @@
             width: 100%;
             transition: 0.3s;
             height: 0;
-            background-color: #2d2d2d9b;
+            background-color: #0000009b;
             svg {
                 font-size: 20px;
                 cursor: pointer;
                 color: #fff;
+                opacity: 0;
+                transition: 0.3s;
             }
         }
     }

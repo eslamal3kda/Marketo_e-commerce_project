@@ -1,7 +1,5 @@
 import React from "react";
 import ContactBar from "../../components/contactBar/ContactBar";
-// import SpecialHeading from "../../components/SpecialHeading/SpecialHeading";
-// import StatisticComponent from "../../components/StatisticComponent/StatisticComponent";
 import AboutPageSection from "../../components/AboutPageContent/AboutPageSection";
 
 export default function AboutUsPage() {
