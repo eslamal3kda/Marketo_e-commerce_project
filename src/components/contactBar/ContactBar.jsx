@@ -6,7 +6,7 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaTelegram, FaWhatsapp } from "rea
 export default function ContactBar({ homePageContactBar }) {
     if (homePageContactBar) {
         return (
-            <section className="contact-bar x-padding">
+            <section className="contact-bar x-padding " >
                 <div className="contact-bar-layout send-email">
                     <ContactBarContent title={"Get Latest Update"} header={"Newsletter Subscribe"} description={"& receive $20 coupon for first shopping"} />
                     <EmailSubmitInput />
