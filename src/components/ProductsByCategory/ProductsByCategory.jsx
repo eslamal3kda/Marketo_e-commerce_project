@@ -3,14 +3,15 @@ import ProductCard from "../ProductCard/ProductCard";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination } from "swiper/modules";
 
-export default function ProductsByCategory() {
+export default function ProductsByCategory({categoryName,categoryClass}) {
     const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
     return (
         <>
             <div className="products-by-category">
-                <div className="category-name">
-                    <h2>computer</h2>
+                <div className={`category-name ${categoryClass}`}>
+                    
+                    <div className="overlay"><h2>{categoryName}</h2></div>
                 </div>
                 <div className="category-pics">
                     <Swiper className="swiper" modules={[Pagination]} pagination={{clickable:true,el:".swiper-pagination"}}>
