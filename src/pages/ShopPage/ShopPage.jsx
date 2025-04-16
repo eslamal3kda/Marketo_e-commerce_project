@@ -2,8 +2,7 @@ import React, { useState } from "react";
 
 import { TbAdjustmentsHorizontal } from "react-icons/tb";
 import FilterCategory from "../../components/filterCategory/FilterCategory";
-import { TfiMenu } from "react-icons/tfi";
-import { CgMenuGridR } from "react-icons/cg";
+import { CgMenu, CgMenuGridR } from "react-icons/cg";
 
 export default function ShopPage() {
     const filterCategories = [
@@ -34,14 +33,12 @@ export default function ShopPage() {
                 </div>
                 <div className="shop-page-content">
                     <div className="shop-page-content-header">
+                        <div className="display-btn">
+                                <CgMenu className={`${dispalyGrid?"":"active"}`} onClick={()=>setDisplayGrid(false)}/>
+                                <CgMenuGridR className={`${dispalyGrid ?"active":""}`} onClick={()=>setDisplayGrid(true)}/>
+                        </div>
                         <div className="heading">
                             <h4>shop</h4>
-                        </div>
-                        <div className="display-btn">
-                            <span>view :</span>
-                            <div className="icons">
-                                <TfiMenu className={`${dispalyGrid?"":"active"}`} onClick={()=>setDisplayGrid(false)}/> <CgMenuGridR className={`${dispalyGrid ?"active":""}`} onClick={()=>setDisplayGrid(true)}/>
-                            </div>
                         </div>
                     </div>
                 </div>
