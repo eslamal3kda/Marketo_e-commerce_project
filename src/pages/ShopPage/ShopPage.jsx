@@ -7,9 +7,8 @@ import { CgMenu, CgMenuGridR } from "react-icons/cg";
 export default function ShopPage() {
     const filterCategories = [
         { id: 1, category: "price", active: false },
-        { id: 2, category: "category", active: true },
-        { id: 3, category: "rate", active: false },
-        { id: 4, category: "name", active: false },
+        { id: 2, category: "rate", active: false },
+        { id: 3, category: "category", active: false },
     ];
     const [dispalyGrid,setDisplayGrid] = useState(true)
     const [range, setRange] = useState(600);

@@ -86,6 +86,25 @@
                                 }
                             }
                         }
+                        &-rate {
+                            margin-block: 12px;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 16px;
+                            &-single-rate {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                label {
+                                    display: flex;
+                                    gap: 6px;
+                                    cursor: pointer;
+                                    svg {
+                                        color: gold;
+                                    }
+                                }
+                            }
+                        }
                     }
                 }
             }

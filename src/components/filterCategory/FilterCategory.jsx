@@ -16,6 +16,13 @@ export default function FilterCategory({ categ, active, handleRange, range }) {
         { id: 9, value: "mobile", label: "Mobile", count: 54 },
         { id: 10, value: "speaker", label: "Speaker", count: 85 },
     ];
+    const rating = [
+        {id:1, rate:1, value:"rate-one"},
+        {id:2, rate:2, value:"rate-two"},
+        {id:3, rate:3, value:"rate-three"},
+        {id:4, rate:4, value:"rate-four"},
+        {id:5, rate:5, value:"rate-five"},
+    ]
     return (
         <>
             <div className="filter-content-categories">
@@ -40,7 +47,15 @@ export default function FilterCategory({ categ, active, handleRange, range }) {
                         </div>
                     </div>
                 )}
-                
+                {categ == "rate" && active && (
+                    <div className="filter-content-categories-items">
+                        <div className="filter-content-categories-items-rate">
+                            {rating.map((rate) => (
+                                <SingleCategory key={rate.id} value={rate.value} rate={rate.rate} />
+                            ))}
+                        </div>
+                    </div>
+                )}
             </div>
         </>
     );
