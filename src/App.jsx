@@ -8,6 +8,7 @@ import ContactPage from "./pages/ContactPage/ContactPage";
 import TermsAndConditionsPage from "./pages/TermsAndConditionsPage/TermsAndConditionsPage";
 import AboutUsPage from "./pages/AboutPage/AboutUsPage";
 import ProductsPage from "./pages/ProductsPage/ProductsPage";
+import ShopPage from "./pages/ShopPage/ShopPage";
 
 export default function App() {
     const queryClient = new QueryClient();
@@ -18,7 +19,7 @@ export default function App() {
             children: [
                 { path: "", element: <HomePage /> },
                 { path: "/pages", element: <h2 className="page-test">Pages Page</h2> },
-                { path: "/shop", element: <h2 className="page-test">shop Page</h2> },
+                { path: "/shop", element: <ShopPage />},
                 { path: "/faq", element: <FAQPage /> },
                 { path: "/contact", element: <ContactPage /> },
                 { path: "/about-us", element: <AboutUsPage /> },

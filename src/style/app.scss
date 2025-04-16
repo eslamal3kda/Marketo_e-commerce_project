@@ -26,6 +26,7 @@
 @import '../components/ProductsByCategory/productsByCategory';
 @import '../pages/FAQPage/faqPage';
 @import '../pages/ProductsPage/productsPage';
+@import '../pages/ShopPage/shopPage';
 @import '../pages/ContactPage/contactPage';
 @import '../pages/TermsAndConditionsPage/termsAndConditions';
 @import '../pages/AboutPage/aboutUsPage';
@@ -37,7 +38,7 @@
     min-height: 80vh;
 }
 
-.page-test  {
-    display: flex;
-    flex-wrap: wrap;
-}
+// .page-test  {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
