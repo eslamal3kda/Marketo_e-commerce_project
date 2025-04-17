@@ -1,6 +1,6 @@
 import React from "react";
 import OfferComponent from "../OfferComponent/OfferComponent";
-import { FaStar } from "react-icons/fa6";
+import { FaRegStar, FaStar } from "react-icons/fa";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
 import { IoHeartOutline } from "react-icons/io5";
