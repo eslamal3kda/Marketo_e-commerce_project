@@ -7,9 +7,9 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 
 export default function ShopPage() {
     const filterCategories = [
-        { id: 1, category: "price", active: true },
-        { id: 2, category: "rate", active: true },
-        { id: 3, category: "category", active: true },
+        { id: 1, category: "price", active: false },
+        { id: 2, category: "rate", active: false },
+        { id: 3, category: "category", active: false },
     ];
     const products = [
         { id: 1, productName: "Portable Speaker", imageURL: "./src/assets/images/products/portable-speaker.jpg", productPrice: "12.00", productOldPrice: "15.00" },
@@ -23,9 +23,9 @@ export default function ShopPage() {
         { id: 9, productName: "LED Television", imageURL: "./src/assets/images/products/LED-Television.png", productPrice: "569.00", productOldPrice: "670.00" },
         { id: 10, productName: "3D Glass", imageURL: "./src/assets/images/products/3D-VR-Glass.jpg", productPrice: "540.00", productOldPrice: "640.00" },
         { id: 11, productName: "Gamming Headphone", imageURL: "./src/assets/images/products/pink-gaming-headphone.jpg", productPrice: "42.00", productOldPrice: "69.00" },
-        { id: 12, productName: "Touchscreen Laptop", imageURL: "./src/assets/images/products/touchscreen-laptop.jpg", productPrice: "540.00", productOldPrice: "640.00" }
+        { id: 12, productName: "Touchscreen Laptop", imageURL: "./src/assets/images/products/touchscreen-laptop.jpg", productPrice: "540.00", productOldPrice: "640.00" },
     ];
-    const [dispalyGrid,setDisplayGrid] = useState(true)
+    const [dispalyGrid, setDisplayGrid] = useState(true);
     const [range, setRange] = useState(600);
     const handleRange = (event) => {
         setRange(event.target.value);
@@ -48,15 +48,37 @@ export default function ShopPage() {
                 <div className="shop-page-content">
                     <div className="shop-page-content-header">
                         <div className="display-btn">
-                                <CgMenu className={`${dispalyGrid?"":"active"}`} onClick={()=>setDisplayGrid(false)}/>
-                                <CgMenuGridR className={`${dispalyGrid ?"active":""}`} onClick={()=>setDisplayGrid(true)}/>
+                            <CgMenu className={`${dispalyGrid ? "" : "active"}`} onClick={() => setDisplayGrid(false)} />
+                            <CgMenuGridR className={`${dispalyGrid ? "active" : ""}`} onClick={() => setDisplayGrid(true)} />
                         </div>
                         <div className="heading">
                             <h4>shop</h4>
                         </div>
                     </div>
-                    <div className={`shop-page-content-products ${dispalyGrid ? "display-grid":"display-block"}`}>
-                        {products.map((prod)=><ProductCard key={prod.id} imageURL={prod.imageURL} productName={prod.productName} productPrice={prod.productPrice} productOldPrice={prod.productOldPrice} icons rating/>)}
+                    <div className="shop-page-content-products-box">
+                        <div className={`shop-page-content-products ${dispalyGrid ? "display-grid" : "display-block"}`}>
+                            {products.map((prod) => (
+                                <ProductCard
+                                    key={prod.id}
+                                    imageURL={prod.imageURL}
+                                    productName={prod.productName}
+                                    productPrice={prod.productPrice}
+                                    productOldPrice={prod.productOldPrice}
+                                    icons
+                                    rating
+                                />
+                            ))}
+                        </div>
+                            <div className="pagination-btns-container">
+                                <span className="pagination-btn">previous</span>
+                                <div className="pagination-page-num">
+                                    <span>1</span>
+                                    <span>2</span>
+                                    <span>3</span>
+                                    <span>...</span>
+                                </div>
+                                <span className="pagination-btn">next</span>
+                            </div>
                     </div>
                 </div>
             </div>
