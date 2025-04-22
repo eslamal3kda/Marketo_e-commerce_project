@@ -1,8 +1,8 @@
 .shop-page {
     &-container {
+        margin-bottom: 300px;
         display: flex;
         gap: 32px;
-        margin-bottom: 300px;
         .filter-menu-container {
             padding-top: 10px;
             display: flex;
@@ -182,7 +182,7 @@
                             border-radius: 8px;
                             color: $main-color;
                             transition: 0.3s;
-                            &:hover {
+                            &:hover , &.active {
                                 background-color: $main-color;
                                 color: #FFF;
                             }
@@ -223,9 +223,15 @@
                         &-image {
                             width: 10rem;
                             height: 100%;
+                            img {
+                                width: 100%;
+                            }
                             &-icons {
                                 gap: 0;
                             }
+                        }
+                        &-content-details {
+                            display: none;
                         }
                     }
                 }

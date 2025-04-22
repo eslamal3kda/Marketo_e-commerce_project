@@ -8,7 +8,6 @@ export default function SingleCategory({ label, count, value, rate }) {
             <>
                 <div className="filter-content-categories-items-rate-single-rate">
                     <input type="radio" id={value} name="rating" />
-                    {/* <label htmlFor={value}>{Array.from({ length: 5 }, (_, index) => (index < rate ? <FaStar key={index} /> : <FaRegStar key={index} />))}</label> */}
                     <label htmlFor={value}>{Array.from({ length: 5 }, (_, index) => <label htmlFor={value}> {(index < rate ? <FaStar key={index} /> : <FaRegStar key={index} /> )}</label>)}</label>
                 </div>
             </>

@@ -83,6 +83,16 @@
                 color: $offer-color;
             }
         }
+        &-details {
+            font-size: 0.8rem;
+            color: #787878;
+            display: -webkit-box;             
+            -webkit-box-orient: vertical;     
+            -webkit-line-clamp: 2;            
+            line-clamp: 2;            
+            overflow: hidden;               
+            text-overflow: ellipsis;
+        }
     }
     &-image:hover .product-card-rating {
         opacity: 1;

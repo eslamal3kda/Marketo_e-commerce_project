@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import { TbAdjustmentsHorizontal } from "react-icons/tb";
 import FilterCategory from "../../components/filterCategory/FilterCategory";
 import { CgMenu, CgMenuGridR } from "react-icons/cg";
 import ProductCard from "../../components/ProductCard/ProductCard";
+import ProductPopUp from "../../components/ProductPopUp/ProductPopUp";
 
 export default function ShopPage() {
     const filterCategories = [
@@ -11,6 +12,11 @@ export default function ShopPage() {
         { id: 2, category: "rate", active: false },
         { id: 3, category: "category", active: false },
     ];
+    const [filterMenu,setFilterMenu] = useState([...filterCategories]) 
+    const handleMenu = (id) => {
+        setFilterMenu(filterMenu.map((categ)=> categ.id == id ? ({...categ, active:! categ.active}): categ ))
+        console.log(filterMenu)
+    }
     const products = [
         { id: 1, productName: "Portable Speaker", imageURL: "./src/assets/images/products/portable-speaker.jpg", productPrice: "12.00", productOldPrice: "15.00" },
         { id: 2, productName: "LED Projector", imageURL: "./src/assets/images/products/LED-Projector.jpg", productPrice: "30.00", productOldPrice: "40.00" },
@@ -40,8 +46,8 @@ export default function ShopPage() {
                         <h2>filter</h2>
                     </div>
                     <div className="filter-content">
-                        {filterCategories.map((item) => (
-                            <FilterCategory key={item.id} categ={item.category} active={item.active} range={range} handleRange={handleRange} />
+                        {filterMenu.map((item) => (
+                            <FilterCategory key={item.id} categ={item.category} active={item.active} range={range} handleRange={handleRange} handleMenu={handleMenu} item={item} />
                         ))}
                     </div>
                 </div>
@@ -66,13 +72,14 @@ export default function ShopPage() {
                                     productOldPrice={prod.productOldPrice}
                                     icons
                                     rating
+                                    details={"Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita voluptates quaerat porro. Excepturi molestiae inventore at commodi modi. Atque quo sit omnis deserunt dignissimos qui molestias iusto reprehenderit, dolore possimus."}
                                 />
                             ))}
                         </div>
                             <div className="pagination-btns-container">
                                 <span className="pagination-btn">previous</span>
                                 <div className="pagination-page-num">
-                                    <span>1</span>
+                                    <span className="active">1</span>
                                     <span>2</span>
                                     <span>3</span>
                                     <span>...</span>
@@ -80,6 +87,7 @@ export default function ShopPage() {
                                 <span className="pagination-btn">next</span>
                             </div>
                     </div>
+                    <ProductPopUp />
                 </div>
             </div>
         </main>

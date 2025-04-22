@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdArrowForwardIos } from "react-icons/md";
 import SingleCategory from "../SingelCategory/SingleCategory";
 
-export default function FilterCategory({ categ, active, handleRange, range }) {
+export default function FilterCategory({ categ, active, handleRange, range,handleMenu,item }) {
     const categoryOptions = [
         { id: 1, value: "allCategories", label: "All Categories", count: 1499 },
         { id: 2, value: "electronics", label: "Electronics", count: 139 },
@@ -26,7 +26,7 @@ export default function FilterCategory({ categ, active, handleRange, range }) {
     return (
         <>
             <div className="filter-content-categories">
-                <div className={`filter-content-categories-heading ${active ? "active" : ""}`}>
+                <div className={`filter-content-categories-heading ${active ? "active" : ""}`} onClick={()=>handleMenu(item.id)}>
                     <h4>{categ}</h4>
                     {active ? <IoIosArrowDown /> : <MdArrowForwardIos />}
                 </div>
