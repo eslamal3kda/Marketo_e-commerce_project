@@ -3,7 +3,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import { MdArrowForwardIos } from "react-icons/md";
 import SingleCategory from "../SingelCategory/SingleCategory";
 
-export default function FilterCategory({ categ, active, handleRange, range,handleMenu,item }) {
+export default function FilterCategory({ categ, active, handleRange, range, handleMenu, item,searchValue,setSearchValue }) {
     const categoryOptions = [
         { id: 1, value: "allCategories", label: "All Categories", count: 1499 },
         { id: 2, value: "electronics", label: "Electronics", count: 139 },
@@ -17,19 +17,27 @@ export default function FilterCategory({ categ, active, handleRange, range,handl
         { id: 10, value: "speaker", label: "Speaker", count: 85 },
     ];
     const rating = [
-        {id:1, rate:1, value:"rate-one"},
-        {id:2, rate:2, value:"rate-two"},
-        {id:3, rate:3, value:"rate-three"},
-        {id:4, rate:4, value:"rate-four"},
-        {id:5, rate:5, value:"rate-five"},
-    ]
+        { id: 1, rate: 1, value: "rate-one" },
+        { id: 2, rate: 2, value: "rate-two" },
+        { id: 3, rate: 3, value: "rate-three" },
+        { id: 4, rate: 4, value: "rate-four" },
+        { id: 5, rate: 5, value: "rate-five" },
+    ];
     return (
         <>
             <div className="filter-content-categories">
-                <div className={`filter-content-categories-heading ${active ? "active" : ""}`} onClick={()=>handleMenu(item.id)}>
+                <div className={`filter-content-categories-heading ${active ? "active" : ""}`} onClick={() => handleMenu(item.id)}>
                     <h4>{categ}</h4>
                     {active ? <IoIosArrowDown /> : <MdArrowForwardIos />}
                 </div>
+                {categ == "name" && active && (
+                    <div className="filter-content-categories-items">
+                        <div className="filter-content-categories-items-name">
+                            <label htmlFor="productName">Product:</label>
+                            <input id="productName" name="productName" type="text" placeholder="Enter Product Name" value={searchValue} onChange={(e)=>setSearchValue(e.target.value)}  />
+                        </div>
+                    </div>
+                )}
                 {categ == "price" && active && (
                     <div className="filter-content-categories-items">
                         <div className="filter-content-categories-items-price">

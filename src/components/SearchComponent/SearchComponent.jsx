@@ -6,7 +6,7 @@ export default function SearchComponent() {
     const [isOpen, setIsOpen] = useState(false);
     const [selectedOption, setSelectedOption] = useState("All Categories");
 
-    const customOptions = ["Electronics", "Men's Fashion", "Women's Fashion", "Office & Security", "Camera", "Drone", "Gamepad", "Mobile", "Speaker"];
+    const customOptions = ["All Categories","Electronics", "Men's Fashion", "Women's Fashion", "Office & Security", "Camera", "Drone", "Gamepad", "Mobile", "Speaker"];
 
     const toggleDropdown = () => setIsOpen(!isOpen);
     const handleOptionClick = (option) => {
