@@ -24,6 +24,7 @@
         align-items: center;
         position: relative;
         z-index: 10;
+        overflow-y: auto;
         & svg {
             position: absolute;
             top: 1rem;
@@ -83,7 +84,8 @@
                     }
                 }
                 button {
-                    margin-inline: 1rem;
+                    padding: 0.8rem 1.8rem;
+                    margin-inline: 0;
                     background-color: $main-color;
                     color: #fff;
                 }
@@ -111,8 +113,10 @@
             &-content {
                 h3 {
                     font-size: 1.4rem;
+                    align-self: center;
                 }
                 &-details{
+                    align-items: center;
                     & > p {
                         font-size: 1rem;
                     }
@@ -146,8 +150,10 @@
             &-content {
                 h3 {
                     font-size: 1.4rem;
+                    align-self: center;
                 }
                 &-details{
+                    align-items: center;
                     & > p {
                         font-size: 1rem;
                     }
@@ -170,19 +176,20 @@
             flex-direction: row;
             &-img,
             &-content {
-                width: 100%;
+                width:calc((100% - 2rem) / 2);
             }
             &-img {
-                width: 60%;
                 img {
-                    width: 100%;
+                    width: 50%;
                 }
             }
             &-content {
                 h3 {
                     font-size: 1.4rem;
+                    align-self: flex-start;
                 }
                 &-details{
+                    align-items: flex-start;
                     & > p {
                         font-size: 1rem;
                     }
@@ -201,35 +208,20 @@
 @media(min-width:1024px){
     .pop-up {
         .pup-up-product {
-            width: 70%;
-            flex-direction: row;
-            &-img,
-            &-content {
-                width: 100%;
-            }
-            &-img {
-                width: 50%;
-                img {
-                    width: 100%;
-                }
-            }
+            width: 85%;
             &-content {
                 h3 {
                     font-size: 1.6rem;
                 }
-                &-details{
-                    & > p {
-                        font-size: 1rem;
-                    }
-                    p:nth-child(2) {
-                        font-size: 0.9rem;
-                    }
-                }
-                .cart-btns {
-                    flex-direction: row;
-                    gap: 1rem;
-                }
             }
+        }
+    }
+}
+
+@media(min-width:1280px) {
+    .pop-up {
+        .pup-up-product {
+            width: 70%;
         }
     }
 }

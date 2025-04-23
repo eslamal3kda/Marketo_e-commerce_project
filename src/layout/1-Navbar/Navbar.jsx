@@ -110,8 +110,8 @@ export default function Navbar() {
                             </ul>
                         </li>
                         <li className="nav_lists">
-                            <NavLink to={"/gallery"}>
-                                Gallery <IoIosArrowDown />
+                            <NavLink to={"/dashboard"}>
+                                Dashboard <IoIosArrowDown />
                             </NavLink>
                         </li>
                     </ul>

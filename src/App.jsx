@@ -9,6 +9,10 @@ import TermsAndConditionsPage from "./pages/TermsAndConditionsPage/TermsAndCondi
 import AboutUsPage from "./pages/AboutPage/AboutUsPage";
 import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import ShopPage from "./pages/ShopPage/ShopPage";
+import ProtectedRoute from "./layout/ProtectedRoute";
+import { AuthProvider } from "./context/AuthContext";
+import { Toaster } from "react-hot-toast";
+import DashboardPage from "./pages/DashboardPage/DashboardPage";
 
 export default function App() {
     const queryClient = new QueryClient();
@@ -19,14 +23,21 @@ export default function App() {
             children: [
                 { path: "", element: <HomePage /> },
                 { path: "/pages", element: <h2 className="page-test">Pages Page</h2> },
-                { path: "/shop", element: <ShopPage />},
+                { path: "/shop", element: <ShopPage /> },
                 { path: "/faq", element: <FAQPage /> },
                 { path: "/contact", element: <ContactPage /> },
                 { path: "/about-us", element: <AboutUsPage /> },
                 { path: "/products", element: <ProductsPage /> },
                 { path: "/terms-and-conditions", element: <TermsAndConditionsPage /> },
                 { path: "/blogs", element: <h2 className="page-test">blogs Page</h2> },
-                { path: "/gallery", element: <h2 className="page-test">gallery Page</h2> },
+                {
+                    path: "/dashboard",
+                    element: (
+                        <ProtectedRoute>
+                            <DashboardPage />
+                        </ProtectedRoute>
+                    ),
+                },
                 { path: "/wishlist", element: <h2 className="page-test">Wishlist Page</h2> },
                 { path: "*", element: <h2 className="page-test">Page Not Founded</h2> },
             ],
@@ -34,7 +45,10 @@ export default function App() {
     ]);
     return (
         <QueryClientProvider client={queryClient}>
-            <RouterProvider router={Routing} />
+            <AuthProvider>
+                <Toaster position="bottom-center" reverseOrder={false} />
+                <RouterProvider router={Routing} />
+            </AuthProvider>
         </QueryClientProvider>
     );
 }
